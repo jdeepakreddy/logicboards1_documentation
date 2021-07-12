@@ -1,0 +1,11 @@
+site_name: Logicboard 1 Documentation
+nav:
+    - Home: index.md
+    - Useful Linux Commands: linuxCommands.md
+    - tmux Commnads: tmuxCommands.md
+
+theme: readthedocs    
+
+markdown_extensions:
+  - admonition
+
