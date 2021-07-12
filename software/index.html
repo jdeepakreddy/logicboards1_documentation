@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Software - Logicboard 1 Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Software";
+    var mkdocs_page_input_path = "software.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Logicboard 1 Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Software</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#some-useful-linux-commands">Some useful Linux Commands</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#system-information">System Information</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#system-info">System info</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#kernel-release-info">Kernel release info</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#system-host-name">System host name</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#who-you-are-logged-in-as">Who you are logged in as</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hardware-information">Hardware Information</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#kernel-messages">kernel messages</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cpu-information">CPU information</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#memory-information">Memory information</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usb-devices-info">USB devices info</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#connected-hardware-info">Connected hardware info</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#file-and-directory-commands">File and Directory Commands</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#list-files">List files</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#present-working-directory">Present working directory</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#new-directory">New directory</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#go-to-previous-directory">Go to previous directory</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#home-directory">Home directory</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#remove-delete-a-file">Remove (delete) a file</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#remove-directory">Remove directory</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#copy-file">Copy file</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#copy-directory">Copy directory</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rename-or-move-file">Rename or Move file</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#create-an-empty-file">Create an empty file</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#view-contents-of-a-file">View contents of a file</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#file-permissions">File Permissions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#networking">Networking</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#network-interfaces-and-ip-address">Network interfaces and IP address</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#eth0-address-and-details">eth0 address and details</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#internet-connection-test">Internet connection test</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#network-address-of-the-host">Network address of the host</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#local-ip-addresses-of-host">Local IP addresses of host</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#download">Download</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#archives-tar-files">Archives (TAR FILES)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#installing-packages">Installing Packages</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#install-packagerpm">Install package.rpm</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#install-software-from-source-code">Install software from source code</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ssh-logins">SSH Logins</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#connect-to-host-as-user">Connect to host as user</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#connect-to-host-using-port">Connect to host using port</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#file-transfers">File Transfers</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#secure-copy">Secure copy</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#copy-files-from-server-to-local-machine">Copy files from server to local machine</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#copy-directories-from-server">Copy directories from server</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#synchronize">Synchronize</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#sync-filesdirectories-between-local-and-remote-system">Sync files/directories between local and remote system</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tmux-commands">Tmux Commands</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#start-tmux">Start tmux</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-pane-to-the-side">Create a pane to the side </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#navigate-between-panes">Navigate between panes </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exit-a-pane">Exit a pane</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#kill-all-sessions">Kill all sessions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#new-tmux-window">New tmux window </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#switch-between-windows">Switch between windows </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rename-a-window">Rename a window </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#detach-a-session">Detach a session </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#view-sessions-running-in-background">View sessions running in background</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#attach-a-session-to-tmux">Attach a session to tmux</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rename-a-session">Rename a session</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-new-session-with-name">Create a new session with name</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#kill-a-particular-session">Kill a particular session</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#resize-active-pane-border">Resize active pane border </a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hardware/">Hardware</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Logicboard 1 Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Software</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="software-documentation">Software Documentation</h1>
+<h2 id="some-useful-linux-commands">Some useful Linux Commands</h2>
+<p>Did you know that there are literally hundreds of Linux commands? Even on a bare-bones Linux server install there are easily over 1,000 different commands. The interesting thing is that most people only need to use a very small subset of those commands. I have listed down some commands that are used often with Logicboard 1. I'll add more commands as I find them to be used very often. </p>
+<h3 id="system-information"><span style="color:green">System Information</span></h3>
+<h4 id="system-info">System info</h4>
+<pre><code>$ uname -a
+</code></pre>
+<h4 id="kernel-release-info">Kernel release info</h4>
+<pre><code>$ uname -r
+</code></pre>
+<h4 id="system-host-name">System host name</h4>
+<pre><code>$ hostname -I
+</code></pre>
+<h4 id="who-you-are-logged-in-as">Who you are logged in as</h4>
+<pre><code>$ whoami
+</code></pre>
+<h3 id="hardware-information"><span style="color:green">Hardware Information</span></h3>
+<h4 id="kernel-messages">kernel messages</h4>
+<pre><code>$ dmesg
+</code></pre>
+<h4 id="cpu-information">CPU information</h4>
+<pre><code>$ cat /proc/cpuinfo
+</code></pre>
+<h4 id="memory-information">Memory information</h4>
+<pre><code>$ cat /proc/meminfo
+</code></pre>
+<h4 id="usb-devices-info">USB devices info</h4>
+<pre><code>$ lsusb
+</code></pre>
+<h4 id="connected-hardware-info">Connected hardware info</h4>
+<pre><code>$ lsblk
+</code></pre>
+<h3 id="file-and-directory-commands"><span style="color:green">File and Directory Commands</span></h3>
+<h4 id="list-files">List files</h4>
+<pre><code>$ ls -al
+</code></pre>
+<h4 id="present-working-directory">Present working directory</h4>
+<pre><code>$ pwd
+</code></pre>
+<h4 id="new-directory">New directory</h4>
+<pre><code>$ mkdir
+</code></pre>
+<h4 id="go-to-previous-directory">Go to previous directory</h4>
+<pre><code>$ cd ..
+</code></pre>
+<h4 id="home-directory">Home directory</h4>
+<pre><code>$ cd
+</code></pre>
+<h4 id="remove-delete-a-file">Remove (delete) a file</h4>
+<pre><code>$ rm file_name
+</code></pre>
+<h4 id="remove-directory">Remove directory</h4>
+<pre><code>$ rm -r directory_name
+</code></pre>
+<h4 id="copy-file">Copy file</h4>
+<pre><code>$ cp &lt;source_file_location&gt; &lt;destination_file_location&gt;
+</code></pre>
+<h4 id="copy-directory">Copy directory</h4>
+<pre><code>$ cp -r &lt;source_dir_location&gt; &lt;destination_dir_location&gt;
+</code></pre>
+<h4 id="rename-or-move-file">Rename or Move file</h4>
+<pre><code>$ mv file1 file2
+</code></pre>
+<h4 id="create-an-empty-file">Create an empty file</h4>
+<pre><code>$ touch file_name
+</code></pre>
+<h4 id="view-contents-of-a-file">View contents of a file</h4>
+<pre><code>$ cat file_name
+</code></pre>
+<h3 id="file-permissions"><span style="color:green">File Permissions</span></h3>
+<pre><code>PERMISSION TYPE        COMMAND
+
+   U   G   W
+  rwx rwx rwx     chmod 777 filename
+  rwx rwx r-x     chmod 775 filename
+  rwx r-x r-x     chmod 755 filename
+  rw- rw- r--     chmod 664 filename
+  rw- r-- r--     chmod 644 filename
+
+</code></pre>
+<pre><code>LEGEND
+        U = User
+        G = Group
+        W = World
+
+        r = Read
+        w = write
+        x = execute
+        - = no access
+
+</code></pre>
+<h3 id="networking"><span style="color:green">Networking</span></h3>
+<h4 id="network-interfaces-and-ip-address">Network interfaces and IP address</h4>
+<pre><code>$ ip a
+</code></pre>
+<h4 id="eth0-address-and-details">eth0 address and details</h4>
+<pre><code>$ ip addr show dev eth0
+</code></pre>
+<h4 id="internet-connection-test">Internet connection test</h4>
+<pre><code>$ ping www.google.com
+</code></pre>
+<h4 id="network-address-of-the-host">Network address of the host</h4>
+<pre><code>$ hostname -i
+</code></pre>
+<h4 id="local-ip-addresses-of-host">Local IP addresses of host</h4>
+<pre><code>$ hostname -I
+</code></pre>
+<h4 id="download">Download</h4>
+<pre><code>$ wget http://domain.com/file
+</code></pre>
+<h3 id="archives-tar-files"><span style="color:green">Archives (TAR FILES)</span></h3>
+<ul>
+<li>Create tar named archive.tar for the directory directory_name: <br>
+<code>$ tar cf archive.tar directory_name</code></li>
+<li>Extract the contents from archive.tar: <br>
+<code>$ tar xf archive.tar</code></li>
+<li>Create a gzip compressed tar file name archive.tar.gz: <br>
+<code>$ tar czf archive.tar.gz directory_name</code></li>
+<li>Extract a gzip compressed tar file: <br>
+<code>$ tar xzf archive.tar.gz</code></li>
+<li>Create a tar file with bzip2 compression: <br>
+<code>$ tar cjf archive.tar.bz2 directory_name</code></li>
+<li>Extract a bzip2 compressed tar file: <br>
+<code>$ tar xjf archive.tar.bz2</code></li>
+<li>Extract xz file:<br>
+<code>$ tar -xf directory_name.tar.xz</code></li>
+</ul>
+<h3 id="installing-packages"><span style="color:green">Installing Packages</span></h3>
+<h4 id="install-packagerpm">Install package.rpm</h4>
+<pre><code>$ rpm -i package.rpm
+</code></pre>
+<h4 id="install-software-from-source-code">Install software from source code</h4>
+<pre><code>$ tar zxvf sourcecode.tar.gz
+$ cd sourcecode
+$ ./configure
+$ make
+$ make install
+</code></pre>
+<h3 id="ssh-logins"><span style="color:green">SSH Logins</span></h3>
+<h4 id="connect-to-host-as-user">Connect to host as user</h4>
+<pre><code>$ ssh user@host
+</code></pre>
+<h4 id="connect-to-host-using-port">Connect to host using port</h4>
+<pre><code>$ ssh -p port user@host
+</code></pre>
+<h3 id="file-transfers"><span style="color:green">File Transfers</span></h3>
+<h4 id="secure-copy">Secure copy</h4>
+<pre><code>$ scp file.txt user@&lt;server_ip_addr&gt;:/usr/local
+</code></pre>
+<h4 id="copy-files-from-server-to-local-machine">Copy files from server to local machine</h4>
+<pre><code>$ scp user@&lt;server_ip_addr&gt;:/usr/local/*.txt /tmp
+</code></pre>
+<h4 id="copy-directories-from-server">Copy directories from server</h4>
+<pre><code>$ scp -r user@&lt;server_ip_addr&gt;:/usr/local/*.txt /tmp
+</code></pre>
+<h4 id="synchronize">Synchronize</h4>
+<pre><code>$ rsync -a /home /backups/
+</code></pre>
+<h4 id="sync-filesdirectories-between-local-and-remote-system">Sync files/directories between local and remote system</h4>
+<pre><code>$ rsync -avz /home user@&lt;server_ip_addr&gt;:/backups/
+</code></pre>
+<h2 id="tmux-commands">Tmux Commands</h2>
+<h3 id="start-tmux">Start tmux</h3>
+<pre><code>$ tmux
+</code></pre>
+<h3 id="create-a-pane-to-the-side">Create a pane to the side <br></h3>
+<p><span style="color:green"><strong>Ctrl+b+%</strong> </span> (% for horizontal panes)<br>
+<span style="color:green"> <strong>Ctrl+b+"</strong>  </span> ( " for vertical panes)</p>
+<h3 id="navigate-between-panes">Navigate between panes <br></h3>
+<p><span style="color:green"> <strong>Ctrl+b+arrows</strong> </span></p>
+<h3 id="exit-a-pane">Exit a pane</h3>
+<pre><code>$ exit
+</code></pre>
+<h3 id="kill-all-sessions">Kill all sessions</h3>
+<pre><code>$ tmux kill-server
+</code></pre>
+<h3 id="new-tmux-window">New tmux window <br></h3>
+<p><span style="color:green"> <strong>Ctrl+b+c</strong> </span> (bottom bar displays new window number, * indicates active window)<br></p>
+<h3 id="switch-between-windows">Switch between windows <br></h3>
+<p><strong>Ctrl+b+window_number ⇒ Ctrl+b+1 or Ctrl+b+0</strong> <br></p>
+<h3 id="rename-a-window">Rename a window <br></h3>
+<p><strong>Ctrl+b+, ⇒ type name and hit Enter</strong></p>
+<h3 id="detach-a-session">Detach a session <br></h3>
+<p><strong>Ctrl+d</strong></p>
+<h3 id="view-sessions-running-in-background">View sessions running in background</h3>
+<pre><code>$ tmux ls
+</code></pre>
+<h3 id="attach-a-session-to-tmux">Attach a session to tmux</h3>
+<pre><code>$ tmux attach -t &lt;name_of_window&gt; 
+example: tmux attach -t 0
+</code></pre>
+<h3 id="rename-a-session">Rename a session</h3>
+<pre><code>$ tmux rename-session -t &lt;old_name&gt; &lt;new_name&gt;
+example: tmux rename-session -t 0 git
+</code></pre>
+<h3 id="create-a-new-session-with-name">Create a new session with name</h3>
+<pre><code>$ tmux new -s docker
+</code></pre>
+<h3 id="kill-a-particular-session">Kill a particular session</h3>
+<pre><code>$ tmux kill-session -t &lt;name_of_session&gt;
+example: `tmux kill-session -t docker
+</code></pre>
+<h3 id="resize-active-pane-border">Resize active pane border <br></h3>
+<p><strong>Hold Ctrl+b+arrow</strong></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../hardware/" class="btn btn-neutral float-right" title="Hardware">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../hardware/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
