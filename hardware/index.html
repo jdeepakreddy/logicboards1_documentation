@@ -86,9 +86,25 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#3d-files">3D Files</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#design-notes">Design Notes</a>
+        </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#todo">ToDo</a>
+    <li class="toctree-l2"><a class="reference internal" href="#design-notes">Design Notes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#power-management-ic">Power Management IC</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#pmic-power-on-sequence">PMIC Power On Sequence</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#pmic-factory-default-voltages">PMIC Factory Default Voltages</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#microprocessor-unit-mpu">Microprocessor Unit (MPU)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#i2c1-peripherals">I2C1 Peripherals</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#i2c4-peripherals">I2C4 Peripherals</a>
+    </li>
+        </ul>
     </li>
         </ul>
     </li>
@@ -97,6 +113,8 @@
     <li class="toctree-l3"><a class="reference internal" href="#connections-checklist-debug">Connections checklist / Debug</a>
     </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#todo">ToDo</a>
     </li>
     </ul>
                     </li>
@@ -179,10 +197,50 @@
 <p><a href="../files/logicboard1A/Assembly/Back_Assembly_Drawing.pdf">Logicboard 1A Bill of Materials (PDF)</a></p>
 <h3 id="3d-files">3D Files</h3>
 <p><a href="../files/logicboard1A/3DFiles/LB1A_DCA7M4_R512MB_F4GB.step">Logicboard 1A Bill of Materials (STEP)</a></p>
-<h3 id="design-notes">Design Notes</h3>
-<h3 id="todo">ToDo</h3>
+<h2 id="design-notes">Design Notes</h2>
+<h3 id="power-management-ic">Power Management IC</h3>
+<h4 id="pmic-power-on-sequence">PMIC Power On Sequence</h4>
+<ul>
+<li>PWR_ON_RESET =&gt; BUCK3 =&gt; BUCK1, BUCK4, LDO2, LDO5 =&gt; LDO4 <br></li>
+<li>BUCK2, LDO1, LDO3, LDO6, REFDDR enable by I2C</li>
+</ul>
+<h4 id="pmic-factory-default-voltages">PMIC Factory Default Voltages</h4>
+<p><span style="color:blue"><strong>Buck Converters</strong></span><br></p>
+<ul>
+<li><strong>BUCK1 (VOUT1)</strong> = Default 1.2V; Imax = 2000mA; Application = Core supply. </li>
+<li><strong>BUCK2 (VOUT2)</strong> = Default 1.1V; Imax = 1600mA; <span style="color:red"> <strong>NOT ON BY DEFAULT</strong> </span>Application = Core</li>
+<li><strong>BUCK3 (VOUT3)</strong> = Default 1.8V; Imax = 1000mA; Application = VIO. </li>
+<li><strong>BUCK4 (VOUT4)</strong> = Default 3.3V; Imax = 3000mA; Application = Application CPU or GP.</li>
+</ul>
+<p><span style="color:blue"><strong>LDOs</strong></span><br></p>
+<ul>
+<li><strong>LDO1</strong> = Default 1.8V; Imax = 800mA; <span style="color:red"> <strong>NOT ON BY DEFAULT</strong> </span> Application = Core supply.</li>
+<li><strong>LDO2</strong> = Default 2.9V; Imax = 800mA; Application = Core supply.</li>
+<li><strong>LDO3</strong> = Default 1.8V; Imax = 150mA; <span style="color:red"> <strong>NOT ON BY DEFAULT</strong> </span> Application = Core supply.</li>
+<li><strong>LDO4</strong> = <span style="color:green"><strong>Fixed 3.3V</strong></span>; Imax = 200mA; Application = Core supply.</li>
+<li><strong>LDO5</strong> = Default 2.9V; Imax = 800mA; Application = Core supply.</li>
+<li><strong>LDO6</strong> = Default 1.0V; Imax = 350mA; <span style="color:red"> <strong>NOT ON BY DEFAULT</strong> </span>Application = Core supply.</li>
+</ul>
+<h3 id="microprocessor-unit-mpu">Microprocessor Unit (MPU)</h3>
+<h4 id="i2c1-peripherals">I2C1 Peripherals</h4>
+<ul>
+<li>DSI </li>
+<li>HDMI</li>
+<li>GPIO Expansion Headers</li>
+</ul>
+<h4 id="i2c4-peripherals">I2C4 Peripherals</h4>
+<ul>
+<li>PMIC</li>
+<li>USB-C</li>
+</ul>
 <h2 id="logicboard-1a-board-bringup">Logicboard 1A board bringup</h2>
 <h3 id="connections-checklist-debug">Connections checklist / Debug</h3>
+<p><span style="color:red"> TO ADD </span></p>
+<h2 id="todo">ToDo</h2>
+<ol>
+<li>Implement Bluetooth Connections.</li>
+<li>Connect all GPIOs to board to board connectors.</li>
+</ol>
               
             </div>
           </div>
