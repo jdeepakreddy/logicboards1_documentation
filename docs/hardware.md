@@ -63,11 +63,57 @@
 [Logicboard 1A Bill of Materials (STEP)](files/logicboard1A/3DFiles/LB1A_DCA7M4_R512MB_F4GB.step)
 
 
-### Design Notes
+## Design Notes
 
-### ToDo
+### Power Management IC
+
+#### PMIC Power On Sequence
+
+- PWR_ON_RESET => BUCK3 => BUCK1, BUCK4, LDO2, LDO5 => LDO4 <br>
+- BUCK2, LDO1, LDO3, LDO6, REFDDR enable by I2C
+
+#### PMIC Factory Default Voltages
+
+<span style="color:blue">**Buck Converters**</span><br>
+
+- **BUCK1 (VOUT1)** = Default 1.2V; Imax = 2000mA; Application = Core supply. 
+- **BUCK2 (VOUT2)** = Default 1.1V; Imax = 1600mA; <span style="color:red"> **NOT ON BY DEFAULT** </span>Application = Core
+- **BUCK3 (VOUT3)** = Default 1.8V; Imax = 1000mA; Application = VIO. 
+- **BUCK4 (VOUT4)** = Default 3.3V; Imax = 3000mA; Application = Application CPU or GP.
+
+<span style="color:blue">**LDOs**</span><br>
+
+- **LDO1** = Default 1.8V; Imax = 800mA; <span style="color:red"> **NOT ON BY DEFAULT** </span> Application = Core supply.
+- **LDO2** = Default 2.9V; Imax = 800mA; Application = Core supply.
+- **LDO3** = Default 1.8V; Imax = 150mA; <span style="color:red"> **NOT ON BY DEFAULT** </span> Application = Core supply.
+- **LDO4** = <span style="color:green">**Fixed 3.3V**</span>; Imax = 200mA; Application = Core supply.
+- **LDO5** = Default 2.9V; Imax = 800mA; Application = Core supply.
+- **LDO6** = Default 1.0V; Imax = 350mA; <span style="color:red"> **NOT ON BY DEFAULT** </span>Application = Core supply.
+
+
+### Microprocessor Unit (MPU)
+
+#### I2C1 Peripherals
+
+- DSI 
+- HDMI
+- GPIO Expansion Headers
+
+#### I2C4 Peripherals
+
+- PMIC
+- USB-C
 
 
 ## Logicboard 1A board bringup
 
 ### Connections checklist / Debug
+
+   <span style="color:red"> TO ADD </span>
+
+
+
+
+## ToDo
+1. Implement Bluetooth Connections.
+2. Connect all GPIOs to board to board connectors.
