@@ -18,7 +18,7 @@
 [Wireless Module Datasheet](files/datasheets/LBEE59B1LV-278.pdf)<br>
 
 ### Reference Manual
-[STM32MP157CAC3 Reference Manual](files/reference_manual/STM32MP1_RM.pdf)<br>
+[STM32MP157CAC3 Reference Manual](https://www.st.com/resource/en/reference_manual/rm0436-stm32mp157-advanced-armbased-32bit-mpus-stmicroelectronics.pdf)<br>
 
 ### Application Notes / Guides
 [STM32MP157 hardware development Application note (AN5031)](files/application_notes/AN5031.pdf)<br>
