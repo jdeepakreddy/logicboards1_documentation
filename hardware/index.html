@@ -57,6 +57,48 @@
                 </ul>
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Hardware</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#key-components-mnp">Key Components MNP</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference-docs-files">Reference Docs / Files</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#datasheets">Datasheets</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reference-manual">Reference Manual</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#application-notes-guides">Application Notes / Guides</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#stm32mp157c-dk2-reference-files-mb1272c">STM32MP157C-DK2 Reference Files (MB1272C)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dsi-lcd-reference-files-mb1407c">DSI-LCD Reference Files (MB1407C)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#logicboard-1-files-rev-100">Logicboard 1 Files Rev 1.0.0</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#schematic">Schematic</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pcb-fabrication-files">PCB Fabrication Files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bill-of-materials">Bill of Materials</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#assembly-files">Assembly Files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3d-files">3D Files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#design-notes">Design Notes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#todo">ToDo</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#logicboard-1a-board-bringup">Logicboard 1A board bringup</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#connections-checklist-debug">Connections checklist / Debug</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                     </li>
                 </ul>
       </div>
@@ -91,7 +133,56 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="hardware-documentation">Hardware Documentation</h1>
+<h2 id="key-components-mnp">Key Components MNP</h2>
+<ul>
+<li>MPU: STM32MP157CAC3</li>
+<li>DDR3L: AS4C256M16D3LC-12BCN</li>
+<li>eMMC: S40FC004C1B2C00000</li>
+<li>PMIC: STPMIC1BPQR</li>
+<li>Wireless: LBEE59B1LV-278</li>
+</ul>
+<h2 id="reference-docs-files">Reference Docs / Files</h2>
+<h3 id="datasheets">Datasheets</h3>
+<p><a href="../files/datasheets/STM32MP157.pdf">STM32MP157CAC3 Datasheet</a> <br>
+<a href="../files/datasheets/DDR3L.pdf">DDR3L RAM Datasheet</a> <br>
+<a href="../files/datasheets/eMMC.pdf">eMMC Datasheet</a><br>
+<a href="../files/datasheets/STPMIC.pdf">PMIC Datasheet</a><br>
+<a href="../files/datasheets/LBEE59B1LV-278.pdf">Wireless Module Datasheet</a><br></p>
+<h3 id="reference-manual">Reference Manual</h3>
+<p><a href="https://www.st.com/resource/en/reference_manual/rm0436-stm32mp157-advanced-armbased-32bit-mpus-stmicroelectronics.pdf">STM32MP157CAC3 Reference Manual</a><br></p>
+<h3 id="application-notes-guides">Application Notes / Guides</h3>
+<p><a href="../files/application_notes/AN5031.pdf">STM32MP157 hardware development Application note (AN5031)</a><br>
+<a href="../files/application_notes/AN5122.pdf">DDR memory routing guidelines Application note (AN5122)</a> <br>
+<a href="../files/application_notes/HDI-Design-Guide.pdf">HDI PCB Design Guide</a></p>
+<h3 id="stm32mp157c-dk2-reference-files-mb1272c">STM32MP157C-DK2 Reference Files (MB1272C)</h3>
+<p><a href="../files/MB1272C/stm32mp1-dk2_usermanual.pdf">MB1272C User Manual</a><br>
+<a href="../files/MB1272C/schematic_MB1272C.pdf">MB1272C Schematic</a><br>
+<a href="../files/MB1272C/MB1272-DK2-C01_BOM.xlsx">MB1272C BOM (.xlsx format)</a><br>
+<a href="../files/MB1272C/design_files_MB1272C.zip">MB1272C Altium Design Files</a><br>
+<a href="../files/MB1272C/fab_files_MB1272C.zip">MB1272C Fabrication Files</a></p>
+<h3 id="dsi-lcd-reference-files-mb1407c">DSI-LCD Reference Files (MB1407C)</h3>
+<p><a href="../files/MB1407C/schematic_MB1407C.pdf">MB1407C Schematic</a><br>
+<a href="../files/MB1407C/MB1407-LCD-C01_BOM.xlsx">MB1407C BOM (.xlsx format)</a><br>
+<a href="../files/MB1407C/design_files_MB1407C.zip">MB1407C Altium Design Files</a><br>
+<a href="../files/MB1407C/fab_files_MB1407C.zip">MB1407C Fabrication Files</a></p>
+<h2 id="logicboard-1-files-rev-100">Logicboard 1 Files Rev 1.0.0</h2>
+<h3 id="schematic">Schematic</h3>
+<p><a href="../files/logicboard1A/Schematics/LB1A_DCA7M4_R512MB_F4GB_REV1.0.0.pdf">Logicboard 1A Schematic (PDF)</a></p>
+<h3 id="pcb-fabrication-files">PCB Fabrication Files</h3>
+<p><a href="../files/logicboard1A/PCB_Fabrication/Logicboard1A_Rev1.0.0.zip">Logicboard 1A PCB Fabrication Files (ZIP)</a></p>
+<h3 id="bill-of-materials">Bill of Materials</h3>
+<p><a href="../files/logicboard1A/BOM/logicboard1A_BOM.pdf">Logicboard 1A Bill of Materials (PDF)</a> <br></p>
+<p><a href="../files/logicboard1A/BOM/BOM_Logicboard_1A.xlsx">Logicboard 1A Bill of Materials (.XLSX)</a></p>
+<h3 id="assembly-files">Assembly Files</h3>
+<p><a href="../files/logicboard1A/Assembly/Front_Assembly_Drawing.pdf">Logicboard 1A Bill of Materials (PDF)</a> <br></p>
+<p><a href="../files/logicboard1A/Assembly/Back_Assembly_Drawing.pdf">Logicboard 1A Bill of Materials (PDF)</a></p>
+<h3 id="3d-files">3D Files</h3>
+<p><a href="../files/logicboard1A/3DFiles/LB1A_DCA7M4_R512MB_F4GB.step">Logicboard 1A Bill of Materials (STEP)</a></p>
+<h3 id="design-notes">Design Notes</h3>
+<h3 id="todo">ToDo</h3>
+<h2 id="logicboard-1a-board-bringup">Logicboard 1A board bringup</h2>
+<h3 id="connections-checklist-debug">Connections checklist / Debug</h3>
               
             </div>
           </div>
