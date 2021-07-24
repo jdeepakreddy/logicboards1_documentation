@@ -54,9 +54,9 @@
 [Logicboard 1A Bill of Materials (.XLSX)](files/logicboard1A/BOM/BOM_Logicboard_1A.xlsx)
 
 ### Assembly Files
-[Logicboard 1A Bill of Materials (PDF)](files/logicboard1A/Assembly/Front_Assembly_Drawing.pdf) <br>
+[Logicboard 1A Front Assembly (PDF)](files/logicboard1A/Assembly/Front_Assembly_Drawing.pdf) <br>
 
-[Logicboard 1A Bill of Materials (PDF)](files/logicboard1A/Assembly/Back_Assembly_Drawing.pdf)
+[Logicboard 1A Back Assembly (PDF)](files/logicboard1A/Assembly/Back_Assembly_Drawing.pdf)
 
 
 ### 3D Files
