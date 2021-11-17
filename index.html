@@ -80,6 +80,18 @@
             
             <li class="nav-item" data-level="1"><a href="#logicboard-som-hardware-and-software-documentation" class="nav-link">Logicboard SoM Hardware and Software Documentation</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#reference-design-images" class="nav-link">Reference Design Images.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#version-100" class="nav-link">Version 1.0.0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#version-200" class="nav-link">Version 2.0.0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#target-audience" class="nav-link">Target Audience</a>
               <ul class="nav flex-column">
               </ul>
@@ -184,18 +196,6 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#reference-design-images" class="nav-link">Reference Design Images.</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#version-100" class="nav-link">Version 1.0.0</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#version-200" class="nav-link">Version 2.0.0</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -205,6 +205,25 @@
 
 <p><span style="color:red"> <strong>THIS DOCUMENTATION IS STILL IN DEVELOPMENT, SO THERE MAY BE SOME BUGS IN IT</strong> </span></p>
 <h1 id="logicboard-som-hardware-and-software-documentation">Logicboard SoM Hardware and Software Documentation</h1>
+<h2 id="reference-design-images">Reference Design Images.</h2>
+<h2 id="version-100">Version 1.0.0</h2>
+<p>Size - 50mm x 50mm</p>
+<p><strong>PCB Layout (Top Layer)</strong>
+<img alt="V1_PCb" src="img/V1_PCb.png" /></p>
+<p><strong>PCB 3D View</strong>
+<img alt="v1_3D_Image" src="img/v1_3D_Image.png" /></p>
+<p><strong>Actual PCB</strong>
+<img alt="v1_pcb" src="img/v1_pcb.jpeg" /></p>
+<h2 id="version-200">Version 2.0.0</h2>
+<p>Size - 42mm x 42mm</p>
+<p><strong>PCB Layout (Top Layer)</strong>
+<img alt="v2_PCB_Image" src="img/v2_PCB_Image.png" /></p>
+<p><strong>PCB 3D View</strong></p>
+<p><img alt="v2_3D_image" src="img/v2_3D_image.png" /></p>
+<p><strong>Actual PCB</strong></p>
+<p><img alt="v2_pcb" src="img/v2_pcb.jpeg" /></p>
+<p><strong>V1 and V2 Size Difference</strong>
+<img alt="v1_v2_pcb" src="img/v1_v2_pcb.jpeg" /></p>
 <p><br></p>
 <h2 id="target-audience">Target Audience</h2>
 <p>This documentation is targeted at embedded engineers who want to design a system around the STM32MP15x series microprocessors. In this documentation, I've put together a broad overview of what's involved in designing a system around ST-Microelectronics STM32MP15x series microprocessors, and then a dive into some specific parts you should check out — and others you should avoid.</p>
@@ -437,26 +456,7 @@ Using a proper PCB stack-up (usually a ~0.1mm prepreg will result in a close-to-
 <li><strong>LDO4</strong> = <span style="color:green"><strong>Fixed 3.3V</strong></span>; Imax = 200mA; Application = Core supply.</li>
 <li><strong>LDO5</strong> = Default 2.9V; Imax = 800mA; Application = Core supply.</li>
 <li><strong>LDO6</strong> = Default 1.0V; Imax = 350mA; <span style="color:red"> <strong>NOT ON BY DEFAULT</strong> </span>Application = Core supply.</li>
-</ul>
-<h2 id="reference-design-images">Reference Design Images.</h2>
-<h2 id="version-100">Version 1.0.0</h2>
-<p>Size - 50mm x 50mm</p>
-<p><strong>PCB Layout (Top Layer)</strong>
-<img alt="V1_PCb" src="img/V1_PCb.png" /></p>
-<p><strong>PCB 3D View</strong>
-<img alt="v1_3D_Image" src="img/v1_3D_Image.png" /></p>
-<p><strong>Actual PCB</strong>
-<img alt="v1_pcb" src="img/v1_pcb.jpeg" /></p>
-<h2 id="version-200">Version 2.0.0</h2>
-<p>Size - 42mm x 42mm</p>
-<p><strong>PCB Layout (Top Layer)</strong>
-<img alt="v2_PCB_Image" src="img/v2_PCB_Image.png" /></p>
-<p><strong>PCB 3D View</strong></p>
-<p><img alt="v2_3D_image" src="img/v2_3D_image.png" /></p>
-<p><strong>Actual PCB</strong></p>
-<p><img alt="v2_pcb" src="img/v2_pcb.jpeg" /></p>
-<p><strong>V1 and V2 Size Difference</strong>
-<img alt="v1_v2_pcb" src="img/v1_v2_pcb.jpeg" /></p></div>
+</ul></div>
             </div>
         </div>
 
@@ -537,5 +537,5 @@ Using a proper PCB stack-up (usually a ~0.1mm prepreg will result in a close-to-
 
 <!--
 MkDocs version : 1.2.3
-Build Date UTC : 2021-11-17 11:02:48.277871+00:00
+Build Date UTC : 2021-11-17 11:13:43.069334+00:00
 -->
