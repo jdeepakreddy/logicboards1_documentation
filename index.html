@@ -1,177 +1,541 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="None">
-  
-  
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <title>Logicboard 1 Documentation</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Logicboard SoM Documentation</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
-  <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Home";
-    var mkdocs_page_input_path = "index.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="js/jquery-2.1.1.min.js" defer></script>
-  <script src="js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
-</head>
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
 
-<body class="wy-body-for-nav" role="document">
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Logicboard SoM Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-  <div class="wy-grid-for-nav">
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem active">
+                                <a href="." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="reference/" class="nav-link">Reference Docs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="software/" class="nav-link">Software</a>
+                            </li>
+                        </ul>
 
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href="." class="icon icon-home"> Logicboard 1 Documentation</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#logic-board-1-variants">Logic Board 1 Variants</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#key-features">Key Features</a>
-    </li>
-    </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="software/">Software</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="hardware/">Hardware</a>
-                    </li>
-                </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href=".">Logicboard 1 Documentation</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>Home</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="logicboard-1-documentation">Logicboard 1 Documentation</h1>
-<p>Logicboard 1 is a System on Module (SoM) containing Dual Arm Cortex -A7 core running up to 800 MHz and Cortex®-M4 at 209 MHz, DDR3L Memory, eMMC Flash and supporting power circuitry. These modules allow a designer to leverage STMicroelectronics STM32MP15x line of Microprocessors with flexible architecture of a Single/Dual Arm Cortex-A7 core running up to 800 MHz and Cortex®-M4 at 209 MHz combined with an option for dedicated 3D graphics processing unit (GPU) and MIPI-DSI display interface and a CAN FD interface along with the software stack in their own custom systems and form factors.  <br></p>
-<p>The design of Logicboard 1 is loosely based on the STM32MP157-DK2 and for cost sensitive applications it can be supplied with a Single Core Processor and without the wireless fitted. The designer can interface the Logicboard 1 via three 70-pin high density connectors.   </p>
-<h2 id="logic-board-1-variants">Logic Board 1 Variants</h2>
-<p><strong>Logic Board 1A (Wi-Fi (2.4GHz, 5GHz) + Bluetooth &amp; BLE 5.0)</strong> </p>
-<ul>
-<li>LB1A_DCA7M4_R512MB_F4GB (Dual Core A7 + M4, 512MB DDR3L RAM, 4GB eMMC, Wireless) </li>
-<li>LB1A_SCA7M4_R512MB_F4GB (Single Core A7 + M4, 512MB DDR3L RAM, 4GB eMMC, Wireless) </li>
-</ul>
-<p><strong>Logic Board 1B (No wireless)</strong></p>
-<ul>
-<li>LB1B_DCA7M4_R512MB_F4GB (Dual Core A7 + M4, 512MB DDR3L RAM, 4GB eMMC) </li>
-<li>LB1B_SCA7M4_R512MB_F4GB (Single Core A7 + M4, 512MB DDR3L RAM, 4GB eMMC) </li>
-</ul>
-<h2 id="key-features">Key Features</h2>
-<ul>
-<li>STM32MP157 Arm®-based dual Cortex®-A7 32 bits + Cortex®-M4 32 bits MPU in 12mm x 12mm TFBGA361 package </li>
-<li>Optional HW crypto and secure boot </li>
-<li>4-Gbit, DDR3L, 16 bits RAM </li>
-<li>4GB eMMC Flash </li>
-<li>Wi-Fi® (2.4GHz, 5GHz) and Bluetooth Low Energy 5.0 </li>
-<li>Compact form factor: 50mm x 50 mm x 4mm Module </li>
-</ul>
-              
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="reference/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="software/" class="btn btn-neutral float-right" title="Software">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-  </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-      
         </div>
-      </div>
 
-    </section>
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
 
-  </div>
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#logicboard-som-hardware-and-software-documentation" class="nav-link">Logicboard SoM Hardware and Software Documentation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#target-audience" class="nav-link">Target Audience</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#what-is-a-logicboard" class="nav-link">What is a Logicboard?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#why-am-i-doing-this" class="nav-link">Why am I doing this?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#lets-get-started" class="nav-link">Let's get started</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#microcontroller-vs-microprocessor" class="nav-link">Microcontroller vs Microprocessor</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#choosing-linux" class="nav-link">Choosing Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#when-not-to-choose-linux" class="nav-link">When not to choose Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#hardware-design-bga-packages" class="nav-link">Hardware Design &amp; BGA Packages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#routing-and-vias" class="nav-link">Routing and Vias</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#trace-size-background-information" class="nav-link">Trace size background information</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#via-size-background-information" class="nav-link">Via size background information</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#package-selected-and-design-considerations" class="nav-link">Package selected and design considerations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#decoupling" class="nav-link">Decoupling</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#grounding-on-pcbs" class="nav-link">Grounding on PCBs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#lets-talk-about-energy" class="nav-link">Let's talk about Energy</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#energy-in-wave-guides" class="nav-link">Energy in Wave guides.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#microstrip-line" class="nav-link">Microstrip line</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#lets-talk-about-return-path" class="nav-link">Let's talk about Return Path</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#position-of-components" class="nav-link">Position of components</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#6-layer-pc-board-stackups-to-avoid" class="nav-link"> 6 layer PC board stackups to avoid </a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#best-6-layer-board-layer-stackup" class="nav-link"> Best 6 layer board layer stackup </a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ddr-routing" class="nav-link">DDR Routing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ddr-pin-swapping" class="nav-link">DDR Pin Swapping</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ddr-routing-recommendations" class="nav-link">DDR Routing Recommendations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#power-management-ic" class="nav-link">Power Management IC</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pmic-factory-default-voltages" class="nav-link">PMIC Factory Default Voltages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#reference-design-images" class="nav-link">Reference Design Images.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#version-100" class="nav-link">Version 1.0.0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#version-200" class="nav-link">Version 2.0.0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
 
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-      
-        <span style="margin-left: 15px"><a href="software/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+<p><span style="color:red"> <strong>THIS DOCUMENTATION IS STILL IN DEVELOPMENT, SO THERE MAY BE SOME BUGS IN IT</strong> </span></p>
+<h1 id="logicboard-som-hardware-and-software-documentation">Logicboard SoM Hardware and Software Documentation</h1>
+<p><br></p>
+<h2 id="target-audience">Target Audience</h2>
+<p>This documentation is targeted at embedded engineers who want to design a system around the STM32MP15x series microprocessors. In this documentation, I've put together a broad overview of what's involved in designing a system around ST-Microelectronics STM32MP15x series microprocessors, and then a dive into some specific parts you should check out — and others you should avoid.</p>
+<h2 id="what-is-a-logicboard">What is a Logicboard?</h2>
+<p>Logicboard is a System on Module (SoM) that includes ST-Microelectronics Dual Arm Cortex-A7 core operating at 800 MHz + Cortex®-M4 core running at 209 MHz, DDR3L Memory, eMMC Flash, and power circuits.<br></p>
+<h3 id="key-features-of-the-som">Key Features of the SoM</h3>
+<ul>
+<li>STM32MP157 Arm®-based dual Cortex®-A7 32 bits + Cortex®-M4 32 bits MPU</li>
+<li>4-Gbit (512MB), DDR3L, 16 bits RAM</li>
+<li>4GB eMMC Flash</li>
+<li>Wi-Fi® (2.4GHz) and Bluetooth Low Energy 5.0 (next revision)</li>
+<li>Form factor: 42mm x 42 mm Module</li>
+</ul>
+<h3 id="key-features-of-carrier-board">Key Features of Carrier Board</h3>
+<ul>
+<li>Gigabit Ethernet</li>
+<li>BLE 5.0</li>
+<li>USB-C OTG</li>
+<li>USB-A Host</li>
+<li>Micro SD-Card</li>
+<li>12V Power Supply Barrel Jack</li>
+<li>MIPI-DSI Port</li>
+<li>RGB LCD Port</li>
+<li>ST-Link Debug</li>
+<li>Boot Switch</li>
+<li>Peripherals (LEDs, Push Buttons)</li>
+<li>GPIO Expansions</li>
+</ul>
+<h2 id="why-am-i-doing-this">Why am I doing this?</h2>
+<p>I know that there are lots of people — especially hobbyists and even professional engineers who are thinking, “I do all my embedded Linux development with Raspberry Pi boards and BeagleBone Black DKs — Why do I need this SoM?” Yes, Raspberry Pi and Beaglebone Black SBCs, on the surface, look similar to some of these parts: they run Linux, you can attach displays to them, do networking, and they have USB, GPIO, I2C, and SPI signals available.</p>
+<p>Now if you dig a bit deep and see, Raspberry Pi's processor BCM2711 was custom-made, from the ground up, to go into smart TVs and set-top boxes — it’s not a general-purpose embedded Linux application processor. This processor has video decoding and graphics acceleration, built-in HDMI transmitters that can drive dual 4k displays but just two PWM channels and not even a single ADC input. Plus you cannot run real-time tasks on this board and this beast consumes a lot of power. So it isn’t generally suited for embedded Linux work. They are primarily designed to make commuting accessible to everyone. Of course, there are workarounds — like I2C-interfaced PWM chips, SPI-interfaced ADCs, or LCD modules with HDMI receivers — but they involve external hardware that adds power, bulk, and cost. If you’re building a quantity-of-one project and you don’t care about these things, then maybe the Pi is the right choice for the job, but if you’re prototyping a real product that’s going to go into production someday, you’ll want to look at the entire landscape before deciding what’s best.</p>
+<p>Some parts of the aforementioned shortcomings hold true for Beaglebone Black also. Although this SBC is ideal for embedded Linux work, you cannot run Real-time applications in them (Okay! you can, but it is quite difficult). And when it comes to production, you've got to design your product from scratch which increases, time to market, project costs, development risks etc. I believe this will be a risky investment for entrepreneurs willing to put everything on the line.</p>
+<p>On top of everything I mentioned,  HDMI is of no use to an embedded Linux developer, as all LCDs use parallel RGB, LVDS, or MIPI as interfaces.</p>
+<h2 id="lets-get-started">Let's get started</h2>
+<p>When you pick a Microcontroller, you should pick the right part for the job and not be afraid to learn whole new software ecosystems. Now, the best part of working with Microprocessors is that once you’re booted into Linux on basically any Microprocessors, they become identical development environments. As long as your processor checks off the right boxes, your application code won’t know if it’s running on an ST or a Microchip part — even if one of those is a brand-new dual-core Cortex-A7 and the other is an old ARM9. Your I2C drivers, your GPIO calls — even your V4L-based image processing code — will all work seamlessly. At least, that’s the sales pitch. Getting a Microprocessor booted is a completely separate experience, and that's what we'll be concentrating on.</p>
+<p>For now, I’m focusing heavily on hardware design. These chips vary considerably in PCB Design difficulty when compared to a traditional Microcontroller. I intentionally designed these boards from scratch rather than starting with the Manufacturer's CAD files. This approach helped me to understand the little intricacies of the MPU, as well as optimize the design for cost and hand-assembly. Later in this documentation, I'll include some pictures of the boards and screenshots of the layouts to illustrate some points.</p>
+<p>Before we begin, let's take a quick detour and study some basics.</p>
+<h2 id="microcontroller-vs-microprocessor">Microcontroller vs Microprocessor</h2>
+<p>The first thing you'll notice if you're coming from microcontrollers is that Linux doesn't normally work on Cortex-M, 8051, AVR, or other popular microcontroller architectures. Rather, we use application processors, such as the Arm Cortex-A, MIPS, and other variants. The most notable difference between these application processors and microcontrollers is that microprocessors include a memory management unit (MMU), whereas microcontrollers do not. Although you can run Linux without an MMU, but it's not recommended. Aside from the MMU, the distinction between MCUs and MPUs is becoming increasingly blurry. Modern application processors share many of the same peripherals as microcontrollers, and high-end Cortex-M7 microcontrollers offer clock speeds that are comparable to entry-level application processors.</p>
+<h2 id="choosing-linux">Choosing Linux</h2>
+<p>Why is Linux so pervasive? And why does something as simple as a TV need to run something as complex as Linux just to display streaming video on a screen? The simple answer is Your
+TV is not simply displaying a video stream as the old analog sets used to do. The stream is digital, possibly encrypted, and it needs processing to create an image. Your TV is connected to the internet. It can receive content from smartphones, tablets, and home media servers. It can be (or soon will be) used to play games and so on. You need a full operating system to manage this degree of complexity.</p>
+<p>Here are some points that drive the adoption of Linux:</p>
+<ul>
+<li>Linux has the necessary functionality. It has a good scheduler, a good network stack, support for USB, Wi-Fi, Bluetooth, many kinds of storage media, good support for multimedia devices, and so on. It ticks all the boxes.</li>
+<li>Linux has been ported to a wide range of processor architectures, including some that are very commonly found in SoC designs – Arm, MIPS, x86, and PowerPC.</li>
+<li>Linux is open source, so you have the freedom to get the source code and modify it to meet your needs. You, or someone working on your behalf, can create a board support package for your particular SoC board or device. You can add protocols, features, and technologies that may be missing from the mainline source code. You can remove features that you don't need to reduce memory and storage requirements. Linux is flexible.</li>
+<li>Linux has an active community; in the case of the Linux kernel, very active. There is a new release of the kernel every 8 to 10 weeks, and each release contains code from more than 1,000 developers. An active community means that Linux is up to date and supports current hardware, protocols, and standards.</li>
+<li>Open source licenses guarantee that you have access to the source code. There is no vendor tie-in.</li>
+</ul>
+<p>For these reasons, Linux is an ideal choice for complex devices.</p>
+<h2 id="when-not-to-choose-linux">When not to choose Linux</h2>
+<p>Is Linux suitable for your project? Linux works well where the problem being solved justifies the complexity. It is especially good where connectivity, robustness, and complex user interfaces are required. However, it cannot solve every problem, so here are some things to consider before you jump in:</p>
+<ul>
+<li>Is your hardware up to the job? Compared to a traditional real-time operating system (RTOS) such as VxWorks or QNX, Linux requires a lot more resources. It needs at least a 32-bit processor and lots more memory. I will go into more detail in the section on typical hardware requirements.</li>
+<li>Do you have the right skill set? The early parts of a project, board bring-up, require detailed knowledge of Linux and how it relates to your hardware. Likewise, when debugging and tuning your application, you will need to be able to interpret the results. If you don't have the skills in-house, you may want to outsource some of the work.</li>
+<li>Is your system real-time? Linux can handle many real-time activities so long as you pay attention to certain details.</li>
+<li>Will your code require regulatory approval (medical, automotive, aerospace, and so on)? The burden of regulatory verification and validation might make another OS a better choice. Even if you do choose Linux for use in these environments, it may make sense to purchase a commercially available distribution from a company that has supplied Linux for existing products, like the one you are building.</li>
+</ul>
+<h2 id="hardware-design-bga-packages">Hardware Design &amp; BGA Packages</h2>
+<p>When it comes to building hardware with the Microprocessors, customers are usually encouraged to modify and reuse processor suppliers' reference designs. But depending on the complexity of your project you might have to design your own. All the variants offered by ST comes in BGA Packages. These seem to make less-experienced engineers nervous — both during layout and prototype assembly but actually,  BGAs are much easier to design around than high-pin-count ultra-fine-pitch QFPs. You just have to have the right mindset.</p>
+<p>ST offers different BGA packages, but the e package must be selected by taking into account the constraints that are strongly dependent upon the application. The list below summarizes the more frequent constraints:</p>
+<ul>
+<li>Amount of interfaces required. Some interfaces might not be available on some packages. Some interfaces combinations might not be possible on some packages. Always refer to product datasheets for details</li>
+<li>PCB technology constraints. Small pitch and high ball density could require more PCB layers and higher PCB class requiring stack-up with micro-via (laser via) technology</li>
+<li>Package height</li>
+<li>PCB available area</li>
+<li>Thermal constraints (larger packages have better thermal dissipation capabilities)
+<img alt="ST_BGA_Packages" src="img/ST_BGA_Packages.png" /></li>
+</ul>
+<h2 id="routing-and-vias">Routing and Vias</h2>
+<p>When pricing a PCB, the size of the traces and vias directly affect the cost to manufacture the board. However, larger traces and vias, while cheaper, can make layout more difficult. Therefore, it is necessary to understand the optimum size of traces and vias for a given design.</p>
+<h2 id="trace-size-background-information">Trace size background information</h2>
+<p>The number of traces that can pass between any two pads of a BGA footprint depends on the trace width and trace spacing. Trace width is the actual width of the trace. Trace spacing is the distance between the edges of any two adjacent traces or a trace and a pad. Trace widths and clearance are shown below.</p>
+<p><img alt="trace_width" src="img/trace_width.png" /> <img alt="Clearance" src="img/Clearance.png" /></p>
+<p>A “x/y trace” indicates a PCB that uses design rules with trace width of x mils and trace spacing of y mils. For example, a 5/6 trace indicates a PCB with trace width of 5mils and trace spacing of 6mils.</p>
+<p>The number of traces that can be routed between any two adjacent pads of the BGA can be calculated using the formula (formula assumes all the traces are equal width):</p>
+<p><strong>tn tw + (tn + 1) ts &lt;= BP – BD</strong></p>
+<p>where,<br>
+tn = number of traces <br>
+tw = trace width <br>
+ts = trace spacing <br>
+BP = BGA pitch <br>
+BD = BGA ball diameter <br></p>
+<p>For example, to calculate the number of 5/5 traces that can be routed between adjacent pads of a typical BGA package assuming : tw = 5mils, ts = 5mils, BP = 39.37mil (1mm) and BD = 13.78mil (0.35mm)</p>
+<p>Using all this in the above equation:</p>
+<p>5tn + 5(tn + 1) &lt;= 25.59</p>
+<p>10tn &lt;= 20.59</p>
+<p>tn   &lt;= 2.059 traces.</p>
+<p>This result indicates that two (2) full 5/5 traces can be routed between adjacent balls of the BGA package.</p>
+<h2 id="via-size-background-information">Via size background information</h2>
+<p>There are two important parameters for vias: drill diameter and annular ring thickness. Drill diameter is the diameter of the actual drilled hole in the PCB. The annular ring thickness is the thickness of the pad that surrounds the drilled hole.</p>
+<p><img alt="via_size" src="img/via_size.png" /></p>
+<p>To determine the diameter of the finished via, use the following formula:</p>
+<p><strong>Finished via diameter = Drill diameter + 2 x (Annular ring thickness)</strong></p>
+<p>A “x/y via” indicates a via with drill diameter of x mils and finished via diameter of y mils. For example, a 12/24 via indicates a via with drill diameter of 12mils and finished via diameter of 24mils.</p>
+<h2 id="package-selected-and-design-considerations">Package selected and design considerations</h2>
+<p>In my case, I choose two very different packages offered by ST based on features.
+<img alt="ST_BGA_Heading" src="img/ST_BGA_Heading.png" /> <img alt="selected packages" src="img/selected%20packages.png" /></p>
+<p>I've opted for the following rules.</p>
+<p><strong>PCB Rule for 0.5mm pitch package for TFBGA361 Package</strong> <br>
+<img alt="0.5mm_pitch_rule" src="img/0.5mm_pitch_rule.png" /></p>
+<p><strong>PCB Rule for 0.65mm pitch package for Power improved pitch on TFBGA361</strong> <br>
+<img alt="0.65mm_pitch_rule" src="img/0.65mm_pitch_rule.png" /></p>
+<p><strong>PCB Rule for 0.8mm pitch package for LFBGA448 Package</strong> <br>
+<img alt="0.8mm_pitch_rule" src="img/0.8mm_pitch_rule.png" /></p>
+<h2 id="decoupling">Decoupling</h2>
+<p>All the power supply and ground pins must be properly connected to the power supplies. These connections, including pads, tracks and vias should have as low impedance as possible. This is typically achieved with thick track widths and, preferably, the use of dedicated power supply planes in multilayer PCBs. In addition, each power supply pair should be decoupled with ceramic capacitors most of the time 100nF or 1µF. These capacitors need to be placed as close as possible to, or below, the appropriate pins on the underside of the PCB. Exact values might
+depend on the application.</p>
+<h2 id="grounding-on-pcbs">Grounding on PCBs</h2>
+<p>The term <strong>"Ground"</strong> refers to the <strong>"Earth"</strong></p>
+<p>UL requires (for safety reasons) the Green wire (Yellow wire, Yellow/Green wire etc.) connect from <strong>"Chassis"</strong> of electrical system to the <strong>"Earth".</strong> Reason being, if the phase wire accidentally touches the chassis of the system, then if someone walks up to the chassis and touches it, the electrical current passes through the person's heart and may kill him. So if a phase wire shorts to chassis, then we want high enough current to pass through the Grounding wire so that the Circuit breaker/ fuse can trip off. ****Safety is the only value of that wire in the electrical system and it has nothing to do with passing through EMI/EMC standards.</p>
+<p>EMI personal often incorrectly refer to the Faraday cage or Shielding surrounding a product as earth ground or chassis ground. Faraday's cage's only function is to keep the fields in the unit inside the unit and the outside fields from entering into the unit.</p>
+<p>If an electrical system or a  product has a shield and a chassis, then it is recommended to connect the shield of the system to the system's chassis because, the shield is simply being the continuation of the Faraday's cage. It is not recommended to connect the shield to the product's ground.</p>
+<p>Ground on PC Boards is often considered as the region of Zero Volt potential with Zero resistance and impedance. However, this is <strong>NOT TRUE</strong>. It is only close to Zero volts but not Zero volts. It is close to true only in the case of DC because when you send energy down the transmission lines, then you get current in the ground and that current cases a voltage drop and that voltage drop means the ground potential from one point to the other is never Zero.</p>
+<h2 id="lets-talk-about-energy">Let's talk about Energy</h2>
+<p><strong>What is Energy?</strong> ...the property of matter that manifests itself as the capacity to perform work and it exists in many forms (mechanical, light, sound, heat, electrical etc.) Energy can neither be created or destroyed it can only be transformed from one form to the other.</p>
+<p>Light energy and electrical energy are precisely the same forms of energy. The only difference is light is a million times higher frequency than Electrical energy at 500 MHz in the signal lines.  </p>
+<p><strong>Q: Where is the energy in the circuit? Is it in the voltage or is it in the current?</strong></p>
+<p><strong>A:</strong> Neither. It is not in the voltage or in the current. The energy is in the fields, better know as the electric fields and magnetic fields.</p>
+<p><strong>Q: Where is the energy located in the circuit board? Is it in the traces or is it in the planes?</strong></p>
+<p><strong>A:</strong> Neither. The energy doesn't travel in the copper. The energy travels in the spaces between the traces and the planes...in the dielectric. The energy in the FR-4 circuit board travels in the plastic and fibre glass material of the PC Board. No energy travels in the copper. The energy that travels between the traces and planes creates a current in the copper which intern creates voltage drop in the circuit but not the other way around. Think about it, it makes sense why Circuit A or Trace A interferes with Circuit B or Trace B or why energy is coupled from one place to the other even though the circuits are not connected to each other. This interference happens only when good care is NOT taken of the space between the trace and return paths. It is all about the space.</p>
+<p><strong>Note:</strong> The Fields (E and H Fields) carry energy and they create voltage and current not the other way around.</p>
+<h2 id="energy-in-wave-guides">Energy in Wave guides.</h2>
+<p>The energy in a transmission event is called a wave, an electromagnetic wave. The traces or the trace and plane that make up the transmission line steer the energy from point A to point B. These copper elements act as a wave guide. So as the trace travels through the circuit board above a plane, the energy travels between the space of the trace and the plane (the dielectric). <strong>Why does it do that?</strong> Because it is the path of lowest impedance for the energy. Of course the air has a lot lower impedance than the dielectric but there is not trace or place hanging in the air. These copper elements acts as a wave guide, whether it is a power system or signal or a digital system; every forward path and return path constitutes as a wave guide which guides energy from point A to point</p>
+<p>A transmission line or wave guide both are same, is a pair of conductors or wires used to move energy from point A to point B. Voltage across copper and current in the copper.</p>
+<p><strong>How does a circuit work?</strong></p>
+<p><strong>Wrong:</strong> When you launch energy into a circuit, the current travels down the trace and into the load and comes back up the ground trace to the driver. <strong>WRONG!!</strong></p>
+<p><strong>Correct:</strong> The energy is launched into the circuit in the form of a wave consisting of fields. The fields create a voltage across both copper features at the same time (trace and ground) and they create a forward and return current in both the copper features at the same time. So the forward current and return current are formed at the exact same time. This is the reason why ground potential is never zero but close to zero. The current is not down and back kind of thing, it is the simultaneous thing.</p>
+<p><strong>Stripline Wave Guide (Centred Strip Line)</strong></p>
+<p><img alt="stripline_wave_guide" src="img/stripline_wave_guide.png" /></p>
+<p>This is a centred stripline. When we launch energy into the stripline, the first thing that appears is the electric field, it is coupled from that trace to the planes and the energy in that field excites the electrons of the copper and electrons start to move causing current flow in the copper of planes and the copper of the trace. The reaction to that is to form a magnetic field which surrounds the trace and is sandwiched between the trace and the planes. Notice all of that energy is in that space between the trace and the planes. It also spreads a little bit to the outside, it is the spreading of the energy and that spreading of energy is what causes that cross talks and other sorts of interference if things are too close to one another.</p>
+<h2 id="microstrip-line">Microstrip line</h2>
+<p><img alt="microstripline" src="img/microstripline.png" /></p>
+<p>These are the fields of an outer layer of the transmission line. The trace routed above a ground plane and on the 1st layer of the board. You can notice the fields expand more than on the fields on the inner layers. This expansion causes some radiation from the outer surface of the boards. The fields expand more on outer layers, cross talks are more on outer layers if good care is not taken in the spacing.</p>
+<h2 id="lets-talk-about-return-path">Let's talk about Return Path</h2>
+<p><img alt="return_path" src="img/return_path.png" /></p>
+<p>Imagine a 2 Layer Microstrip style PC Board, where a signal is routed from Driver IC to the Load and load and the driver ICs are connected to the ground plane through a via.</p>
+<p>Now when the frequency of the signal is low say just DC energy that doesn't change state is being fed say power supply is being fed, then the return path for the current would be the short and quick path cross the plane between the ground pins of the ICs. Why? Because at very low frequencies, current will take the path of least resistance, since impedance of "L" becomes negligible compared to "R"  because the formula for Transmission Line impedance says ⇒ <strong>Z = Sqrt [(R+jwL) / (G + jwC)</strong>]) According to the formula it says impedance is the square root of Resistance + Frequency times Inductance. Now as the frequency gets low, inductance becomes low. In the case of DC frequency is 0 so inductance is 0 and hence it only depends on the resistance of the copper.  </p>
+<p>The DC current wouldn't just take the short path on the PC Board, it would spread out to a very wide swath and the swath would be about as wide as it is long. So it would effectively form a square because the DC would take the path of least resistance because resistance is per square measurement, therefore the current path would be a square.  </p>
+<p>Now if you could change the frequency of the output signal from the driver IC to a few KHz or MHz, then the return current path for the signal travel directly below the trace between the driver and receiver ICs. Remember the forward and return current are being generated simultaneously. The arrows in the above image indicate that.</p>
+<p><strong>Experiment to show current / energy takes the path of least impedance.</strong></p>
+<p>To prove the this point you can run a simple experiment in your lab.</p>
+<p><img alt="return_path_experiment" src="img/return_path_experiment.png" /></p>
+<p>Connect a 2 meter Co-axial cable (B) and loop it back such that the ends of the co-axial cable are near one another separated by 2 inches and couple the shields of the co-axial cable together with 2 inch piece wire (D) and attach a signal generator (A) to one end and a load resistor (C) to the other end of the co-axial. Do a basic calculation on how much current the resistor can take and put a current loop around that piece of wire. Then turn on the signal generator and put it in DC mode and send energy through the co-axial. Now what you will notice is that, the return current will pass through that short piece of wire (D) and not on the co-axial shield. Now if you increase the frequency in the signal generator (A), what you will notice is that as the frequency gets higher and higher, the return current in the short piece of wire (D) connecting the shields of co-axial cable will reduce. Now after the signal frequency reaches some MHz you will notice that almost no current flows through (D). All of the return current flows through the shield of the co-axial cable (B) even though the length of the co-axial able is longer than the (D). This is because it has a lot less impedance i.e. a path of lowest impedance and greatest capacitance ⇒ according to the impedance formula.</p>
+<p>This experiment proves that, energy always takes the path of least impedance.</p>
+<p><strong>Impedance</strong></p>
+<p>When the return current path is directly under the trace, we often refer to it as the "Path of least impedance" because energy always takes the path of lowest impedance. Impedance is essentially the path of lowest inductance and greatest capacitance coupled.</p>
+<p><strong>What is inductance (L)?</strong></p>
+<p>Inductance (L) is an impedance to change in current flow, caused by the (inertia) magnetic field, meaning what? Now imagine you have two traces side by side separated by some spacing , one is the forward path and the other is the return path. Now when you launch energy into this circuit, the fields exists between these space and the magnetic field is going to be of large size because of the spacing and result of its large size it will have higher inertia which means it will create high impedance for the current change in the circuit. That is what drives up inertia. Large volume of magnetic fields equals large volume of Inductance.</p>
+<p><strong>How to reduce Inductance and increase capacitance? In other words, how to reduce impedance?</strong></p>
+<p>Instead of having the traces far apart, bring them closer to each other. Now you will have a small volume of space for the magnetic fields and the end result is you will have small field, small emission and low inductance. The best of all, put one directly above the other meaning have the forward path and the return path directly over one an other in the board stack. Route everything above the ground plane and keep the dielectric small and you will minimise the inductance.</p>
+<p><strong>How do you create a low inductance or low impedance in the power vias of a decoupling capacitors?</strong></p>
+<p>You do not need large vias to create low inductance. You can achieve that by bring the vias very close to each other. You keep it at the side of the capacitor pads. If possible keep it on the pads of the capacitors.</p>
+<p><strong>Routing Low frequency and High Frequency signals.</strong></p>
+<p>If you were to route low frequency signals, try to route the forward and return path close to each other. Better would be directly above one another. Because low frequency signals tends to spread a lot. You need to channel it such a way that it follows a path of least resistance or impedance. That would be traces directly on top of one another.</p>
+<p>When it comes to high frequency signals, if you are not cognisant about how you route the forward and return path such that they have least impedance then the high frequency signals will self channel itself on the least impedance path meaning it might use traces adjacent to it as a return path causing cross talks.</p>
+<p><strong>You have to route every signal with respect to the ground like you actually mean it.</strong> <strong>You cannot route them randomly and say "Hey it will find it's ground". It doesn't work that way. That's not how circuits work. Every signals needs to have an intentional low impedance ground nearby. Always try to reference a signal to a ground place below it.</strong></p>
+<p><strong>Is it okay to reference a power place for a signal as a return path?</strong></p>
+<p>Answer: Yes, if and only if, you reference a power plane that generated the signal. Let's say the signal is generated by a 5V driver as a 5V signal. Then you could reference it with a 5V power place meaning you could come out of the driver route across the 5V power plane to the receiver. You cannot reference it with a 3.3V plane. Also make sure to the power plane has a Ground plane reference close by. But it is generally not a good idea to change layers when you do reference a power plane.</p>
+<h2 id="position-of-components">Position of components</h2>
+<p>Group components by Function/Family.</p>
+<ul>
+<li>Analog in one area, Digital in another.</li>
+<li>Devices operating at different voltages in their own respective areas.</li>
+<li>Devices operating at different frequencies in their own respective areas.</li>
+<li>All ICs routing to connectors must be placed very near to their respective connectors and try to filter out the signals going to the connector or cable because if you don't then the noise, will go to the other board or worse if it goes into the cable, the cable may act like an antenna and radiate the energy.</li>
+</ul>
+<p>Separate the analog and digital sections by a distance of 20 x the thickness of dielectric between the layers and <strong>do not split the ground planes. If you want to avoid coupling of noise from one section to the other, just split the power planes only and do not split ground plane and it should work. Do not route across split ground planes and split power planes. It will generate a lot of EMI problems.</strong></p>
+<p>Try avoiding to route on the ground planes. If you have to then keep it as short as possible.</p>
+<p>Use a zero ohm resistor to cross slower signals over other signals. Do not do this with high frequency signals because a zero ohm at frequency is not a zero ohm resistor.</p>
+<p><img alt="0e_resistor_for_crossing" src="img/0e_resistor_for_crossing.png" /></p>
+<h2 id="6-layer-pc-board-stackups-to-avoid"><span style="color:red"> 6 layer PC board stackups to avoid </span></h2>
+<p>L1 - Signal     </p>
+<p>L2 - Signal                                         </p>
+<p>L3 - Ground                                            </p>
+<p>L4 - Power                                              </p>
+<p>L5 - Signal                                              </p>
+<p>L6 - Signal  </p>
+<hr />
+<p>L1 - Signal     </p>
+<p>L2 - Power                                         </p>
+<p>L3 - Signal                                            </p>
+<p>L4 - Signal                                              </p>
+<p>L5 - Ground                                              </p>
+<p>L6 - Signal</p>
+<h2 id="best-6-layer-board-layer-stackup"><span style="color:green"> Best 6 layer board layer stackup </span></h2>
+<p>L1 - Sig/power                        </p>
+<p>L2 - Ground                           </p>
+<p>L3 - Sig/Power                       </p>
+<p>L4 - Ground                             </p>
+<p>L5 - Sig/Power                         </p>
+<p>L6 - Ground            </p>
+<hr />
+<p>L1 - Sig/power                        </p>
+<p>L2 - Ground                           </p>
+<p>L3 - Sig/Power                       </p>
+<p>L4 - Ground/Signal                           </p>
+<p>L5 - Ground                       </p>
+<p>L6 - Signal/Power  </p>
+<h2 id="ddr-routing">DDR Routing</h2>
+<p>It’s worth investing a bit of time to learn about length-tuning and controlled impedances since it will give you immense design flexibility when architecting your system. When most people think of DDR routing, length-tuning is the first thing that comes to mind. If you use a decent PCB design package, setting up length-tuning rules and laying down meandered routes is so trivial to do that most designers don’t think anything of it — they just go ahead and length-match everything that’s relatively high-speed — SDRAM, SDIO, parallel CSI / LCD, etc.
+Using a proper PCB stack-up (usually a ~0.1mm prepreg will result in a close-to-50-ohm impedance for a 5mil-wide trace) is your first line of defense against impedance issues, and is usually sufficient for getting things working well enough to avoid simulation / refinement. The biggest source of EMC issues related to DDR3 is likely going to come from your address bus. DDR3 uses a one-way address bus (the CPU is always the transmitter and the memory chip is always the receiver), and DDR memory chips do not have on-chip termination for these signals. Theoretically, they should be terminated to VTT (a voltage derived from VDDQ/2) with resistors placed next to the DDR memory chip. On large fly-by buses with multiple memory chips, you’ll see these VTT termination resistors next to the last chip on the bus. The resistors absorb the EM wave propagating from the MPU which reduces the reflections back along the transmission line that all the memory chips would see as voltage fluctuations.  To reduce cross-talk, you can put plenty of space between traces — three times the width (3S) is a standard rule of thumb.</p>
+<h2 id="ddr-pin-swapping">DDR Pin Swapping</h2>
+<p>Because DDR memory doesn’t care about the order of the bits getting stored, you can swap individual bits — except the least-significant one if you’re using write-leveling — in each byte lane with no issues. Byte lanes themselves are also completely swappable. Having said that, since all the parts I reviewed are designed to work with a single x16-wide DDR chip (which has an industry-standard pinout), I found that most pins were already balled out reasonably well. Before you start swapping pins, make sure you’re not overlooking an obvious layout that the IC designers intended.</p>
+<h2 id="ddr-routing-recommendations">DDR Routing Recommendations</h2>
+<p><strong>Pay attention to PCB stack-up.</strong> Use a 4-layer stack-up with thin prepreg (~0.1mm) to lower the impedance of your microstrips — this allows the traces to transfer more energy to the receiver. Those inner layers should be solid ground and DDR VDD planes respectively. Make sure there are no splits under the routes. If you’re nit-picky, pull back the outer-layer copper fills from these tracks so you don’t inadvertently create coplanar structures that will lower the impedance too much.</p>
+<p><strong>Avoid multiple DRAM chips.</strong> If you start adding extra DRAM chips, you’ll have to route your address/command signals with a fly-by topology (which requires terminating all those signals — yuck), or a T-topology (which requires additional routing complexity). Stick with 16-bit-wide SDRAM, and if you need more capacity, spend the extra money on a dual-die chip — you can get up to 2 GB of RAM in a single X16-wide dual-rank chip, which should be plenty for anything you’d throw at these CPUs.</p>
+<p><strong>Faster RAM makes routing easier.</strong> Even though our processors reviewed here rarely can go past 400-533 MHz DDR speeds, using 800 or 933 MHz DDR chips will ease your timing budget. The reduced setup/hold times make address/command length-tuning almost entirely unnecessary, and the reduced skew even helps with the bi-directional data bus signals.</p>
+<p>It is always good to read ST's application notes on DDR3 Routing. Even though you might not be applying all of their recommended rules, but you end up learning a lot of information.</p>
+<h2 id="power-management-ic">Power Management IC</h2>
+<p><strong>PMIC Power On Sequence</strong></p>
+<ul>
+<li>PWR_ON_RESET =&gt; BUCK3 =&gt; BUCK1, BUCK4, LDO2, LDO5 =&gt; LDO4 <br></li>
+<li>BUCK2, LDO1, LDO3, LDO6, REFDDR enable by I2C</li>
+</ul>
+<h2 id="pmic-factory-default-voltages">PMIC Factory Default Voltages</h2>
+<p><span style="color:blue"><strong>Buck Converters</strong></span><br></p>
+<ul>
+<li><strong>BUCK1 (VOUT1)</strong> = Default 1.2V; Imax = 2000mA; Application = Core supply.</li>
+<li><strong>BUCK2 (VOUT2)</strong> = Default 1.1V; Imax = 1600mA; <span style="color:red"> <strong>NOT ON BY DEFAULT</strong> </span>Application = Core</li>
+<li><strong>BUCK3 (VOUT3)</strong> = Default 1.8V; Imax = 1000mA; Application = VIO.</li>
+<li><strong>BUCK4 (VOUT4)</strong> = Default 3.3V; Imax = 3000mA; Application = Application CPU or GP.</li>
+</ul>
+<p><span style="color:blue"><strong>LDOs</strong></span><br></p>
+<ul>
+<li><strong>LDO1</strong> = Default 1.8V; Imax = 800mA; <span style="color:red"> <strong>NOT ON BY DEFAULT</strong> </span> Application = Core supply.</li>
+<li><strong>LDO2</strong> = Default 2.9V; Imax = 800mA; Application = Core supply.</li>
+<li><strong>LDO3</strong> = Default 1.8V; Imax = 150mA; <span style="color:red"> <strong>NOT ON BY DEFAULT</strong> </span> Application = Core supply.</li>
+<li><strong>LDO4</strong> = <span style="color:green"><strong>Fixed 3.3V</strong></span>; Imax = 200mA; Application = Core supply.</li>
+<li><strong>LDO5</strong> = Default 2.9V; Imax = 800mA; Application = Core supply.</li>
+<li><strong>LDO6</strong> = Default 1.0V; Imax = 350mA; <span style="color:red"> <strong>NOT ON BY DEFAULT</strong> </span>Application = Core supply.</li>
+</ul>
+<h2 id="reference-design-images">Reference Design Images.</h2>
+<h2 id="version-100">Version 1.0.0</h2>
+<p>Size - 50mm x 50mm</p>
+<p><strong>PCB Layout (Top Layer)</strong>
+<img alt="V1_PCb" src="img/V1_PCb.png" /></p>
+<p><strong>PCB 3D View</strong>
+<img alt="v1_3D_Image" src="img/v1_3D_Image.png" /></p>
+<p><strong>Actual PCB</strong>
+<img alt="v1_pcb" src="img/v1_pcb.jpeg" /></p>
+<h2 id="version-200">Version 2.0.0</h2>
+<p>Size - 42mm x 42mm</p>
+<p><strong>PCB Layout (Top Layer)</strong>
+<img alt="v2_PCB_Image" src="img/v2_PCB_Image.png" /></p>
+<p><strong>PCB 3D View</strong></p>
+<p><img alt="v2_3D_image" src="img/v2_3D_image.png" /></p>
+<p><strong>Actual PCB</strong></p>
+<p><img alt="v2_pcb" src="img/v2_pcb.jpeg" /></p>
+<p><strong>V1 and V2 Size Difference</strong>
+<img alt="v1_v2_pcb" src="img/v1_v2_pcb.jpeg" /></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
 </div>
-    <script>var base_url = '.';</script>
-    <script src="js/theme.js" defer></script>
-      <script src="search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
 
-</body>
+    </body>
 </html>
 
 <!--
-MkDocs version : 1.1.2
-Build Date UTC : 2021-08-03 05:22:16.885065+00:00
+MkDocs version : 1.2.3
+Build Date UTC : 2021-11-17 11:02:48.277871+00:00
 -->
